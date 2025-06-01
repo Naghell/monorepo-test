@@ -1,0 +1,15 @@
+{
+  "name": "monorepo-test",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd apps/frontend dev & bun run --cwd apps/backend dev",
+    "build": "bun run --cwd apps/frontend build && bun run --cwd apps/backend build",
+    "start": "bun run --cwd apps/frontend start & bun run --cwd apps/backend start"
+  },
+  "packageManager": "bun@1.0.35"
+} 
